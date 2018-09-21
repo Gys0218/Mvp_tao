@@ -1,0 +1,5 @@
+<resources>
+    <paths>
+        <external-path path="." name="camera_photos" />
+    </paths>
+</resources>

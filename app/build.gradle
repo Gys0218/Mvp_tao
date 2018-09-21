@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.lenovo.mvp_tao"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation deps.support.app_compat
+    implementation deps.support.constraintlayout
+    implementation deps.support.multidex
+    implementation deps.support.annotations
+    implementation deps.support.recyclerview
+
+    implementation deps.rxjava2.rxjava
+    implementation deps.rxjava2.rxAndroid
+
+    implementation deps.retrofit.retrofit
+    implementation deps.retrofit.retrofit_converter_gson
+    implementation deps.retrofit.retrofit_adapter_rxjava2
+    implementation deps.retrofit.retrofit_rxlifecycle_components
+    implementation deps.okhttp3.okhttp3
+    implementation deps.okhttp3.logging_interceptor
+    implementation deps.greendao.greendao
+    implementation deps.glide.glide
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    annotationProcessor deps.glide.compiler
+    implementation files('libs/umeng-share-core-6.9.3.jar')
+
+    implementation 'org.greenrobot:eventbus:3.1.1'  //EventBus
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0' //圆形图片
+
+    implementation 'com.android.support:design:27.1.1'
+
+
+    implementation 'com.hjm:BottomTabBar:1.1.1'//底部导航栏
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4'//没有使用特殊Header，可以不加这行
+
+    implementation 'org.jsoup:jsoup:1.10.2'//webView
+
+    implementation 'de.hdodenhof:circleimageview:2.2.0'//原形图片
+
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.news.details_news.DetailsActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:background="@drawable/register_left_close" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scrollView3">
+            <TextView
+                android:id="@+id/title"
+                android:text="爱丽丝的饭卡上劳动节放假爱的f"
+                android:maxLines="3"
+                android:textSize="23dp"
+                android:textColor="#222222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/origin"
+                android:layout_width="match_parent"
+                android:text="来源"
+                android:textSize="11dp"
+                android:textColor="#222222"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/add_shoucang"
+                android:background="@drawable/add_shoucang"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/time"
+                android:text="19点55分"
+                android:textSize="11dp"
+                android:textColor="#222222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_marginTop="21dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+
+            <TextView
+                android:textSize="8dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="38dp"
+                android:textColor="#a4a4a4"
+                android:text="本文观点不代表第一通航立场，如有转载请联系原作者"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/major"
+                android:layout_gravity="center"
+                android:background="@drawable/major"
+                android:layout_marginTop="23dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="11dp"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#222222"
+                android:layout_marginTop="14dp"
+                android:text="相关新闻"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_xiangguan"
+                android:layout_marginTop="14dp"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <View
+                android:layout_marginTop="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="11dp"></View>
+
+            <TextView
+                android:text="热门跟帖"
+                android:layout_marginTop="14dp"
+                android:textSize="@dimen/w_px_34"
+                android:textColor="#222222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_pinglun"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <ImageView
+                android:id="@+id/img_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/w_px_45"
+                android:background="@drawable/look_more" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.example.lenovo.mvp_tao.utils.CustomRadioButton
+            android:id="@+id/rbn_share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/img_fenxiang"
+            android:gravity="center"
+            android:text="分享" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:background="#a4a4a4"></View>
+
+        <com.example.lenovo.mvp_tao.utils.CustomRadioButton
+            android:id="@+id/rbn_pinglun"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/img_pinglun"
+            android:gravity="center"
+            android:text="评论" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="18dp"
+            android:background="#a4a4a4"></View>
+
+        <com.example.lenovo.mvp_tao.utils.CustomRadioButton
+            android:id="@+id/rbn_shoucang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@drawable/img_shoucang_no"
+            android:gravity="center"
+            android:text="收藏" />
+
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>
